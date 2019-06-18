@@ -157,3 +157,166 @@ datos empleado para:
 - Administración de los datos
 - Ejecución de sentencias complejas diseñadas para transformar los datos almacenados en
   información útil.
+- Diseñado para trabajar con conjunto de datos.
+- Portable. Existencia de estándares regulados que permiten el uso del lenguaje relativamente
+  independiente al manejador que se utilice.
+- Existencia de extensiones empleadas para evitar los problemas que implica la falta se sentencias de
+  control y estructuras que proporciona un lenguaje procedimental. En este caso cada manejador
+  define sus propias extensiones del SQL:
+  - PL-SQL en Oracle
+  - Transact SQL en SQL Server (Microsoft)
+  - SQL-PL En DB2 (IBM)
+
+
+
+### Categorias
+
+- **DDL (Data Definition Language): **Lenguaje de definición de datos. Es el lenguaje encargado de la creación, modificación y eliminación de la estructura de los objetos de la base de datos (tablas, índices, vistas, etc).
+- **DML (Data Manipulation Language): **Lenguaje de manipulación de datos. Es el lenguaje que permite realizar las tareas de consulta, modificación y eliminación de los datos almacenados en una base de datos.
+- **DCL (Data Control Language): **Lenguaje de control de datos. Es el lenguaje encargado de configurar y establecer el control de acceso a la base de datos. Incluye instrucciones para definir accesos y privilegios a los distintos objetos de la base de datos.
+- **DQL (Data Query Language): **Lenguaje de consulta de datos. Algunos autores clasifican a la instrucción SELECT como el único elemento de una cuarta categoría del lenguaje SQL Data Query Language (DQL).
+- **Transaction Control: **Control de transacciones. Es el lenguaje empleado para crear, y administrar transacciones aplicadas a un conjunto de sentencias DML principalmente.
+
+![1560831951664](/home/galigaribaldi/.config/Typora/typora-user-images/1560831951664.png)
+
+### Creación de Tablas (Sentencia Create)
+
+![1560832057900](/home/galigaribaldi/.config/Typora/typora-user-images/1560832057900.png)
+
+```sql
+CREATE TABLE empleado (
+    nombre varchar2(40),
+    apellido_paterno VARCHAR2(40),
+    apellido_materno VARCHAR2(40),
+    fecha_nacimiento DATE,
+    tipo_empleado CHAR(1),
+    sueldo_base number(8,2),
+    foto BLOB,
+    titulado NUMBER(1,0)
+);
+```
+
+**NOTA: **Usualmente se recomienda que las tablas tenngan una llave primaria o una clave, sin embargo esto no es un requisito obligatorio.
+
+**Ejemplo: ** Crear la siguiente tabla a partir del modelo relacional
+
+![1560832870389](/home/galigaribaldi/.config/Typora/typora-user-images/1560832870389.png)
+
+```sql
+CREATE TABLE empleado_simple(
+	empleado_id NUMBER(10,0) NOT NULL,
+    nombre VARCHAR2(40) NOT NULL
+);
+```
+
+**Ejemplo: **Crear la siguiente tabla a partir del modelo relacional, tomar en cuenta la creación de la llave primaria
+
+![1560833021073](/home/galigaribaldi/.config/Typora/typora-user-images/1560833021073.png)
+
+```sql
+CREATE TABLE puesto(
+    puesto_id NUMERIC(2,0) PRIMARY KEY,
+    nivel CHAR(1) NOT NULL,
+    clave VARCHAR2(3) NOT NULL,
+    sueldo NUMERIC(8,2) NOT NULL
+);
+```
+
+```sql
+CREATE TABLE puesto(
+    puesto_id NUMERIC(2,0) CONSTRAINT puesto_id_pk PRIMARY KEY,
+    nivel CHAR(1) NOT NULL,
+    clave VARCHAR2(3) NOT NULL,
+    sueldo NUMERIC(8,2) NOT NULL
+);
+```
+
+**Ejemplo: **Crear la siguiente tabla a  partir del modelo relacional, tomar en cuenta la creación de la llave foránea que una a ambas tablas.
+
+![1560833680241](/home/galigaribaldi/.config/Typora/typora-user-images/1560833680241.png)
+
+```sql
+CREATE TABLE puesto(
+    puesto_id NUMERIC(2, 0) PRIMARY KEY,
+    nivel CHAR(1) NOT NULL,
+    clave VARCHAR2(3) NOT NULL,
+    sueldo NUMERIC(2) NOT NULL
+);
+
+CREATE TABLE empleado(
+    empleado_id NUMERIC(10,0) PRIMARY KEY,
+    nombre VARCHAR2(40) NOT NULL,
+    puesto_id NOT NULL CONSTRAINT puesto_id_fk REFERENCES puesto(puesto_id)
+);
+```
+
+**Ejemplo: ** Crear la siguiente tabla a  partir del modelo relacional, tomar en cuenta la creación de la llave foránea que una a ambas tablas.
+
+![1560834223233](/home/galigaribaldi/.config/Typora/typora-user-images/1560834223233.png)
+
+```sql
+CREATE TABLE quincena(
+    quincena_id NUMERIC(10,0) CONSTRAINT quincena_pk PRIMARY KEY,
+    numero_quincena NUMERIC(2,0) NOT NULL,
+    fecha_inicio DATE NOT NULL,
+    fecha_fin DATE NOT NULL
+);
+
+CREATE TABLE nomina(
+    nomina_id NUMERIC(10,0) CONSTRAINT nomina_pk PRIMARY KEY,
+    fecha_creacion DATE NOT NULL,
+    quincena_id NOT NULL CONSTRAINT
+quincena_id_fk REFERENCES
+quincena(quincena_id)
+);
+```
+
+### Insersión de Datos en SQL (Sentencia Insert, Update y Delete)
+
+Permite agregar, modificar, o eliminar la información almacenada en una base de datos. Esta
+categoría del SQL está integrada por las siguientes instrucciones:
+
+- **UPDATE: **Nos permite hacer cambios en la tabla con respecto a la información antes contenida, es decir hace runa actualización o cambio en los datos de la tabla
+- **DELETE: **Como su nombre nos indica, nos permite borrar datos que estén contenidos en la tabla
+- **INSERT: **Nos permite Ingresar nuevos valores a la tabla
+
+#### Sentencia INSERT
+
+**Ejemplo: **Usar la sentencia *Insert* para llenar con datos la siguiente tabla
+
+![1560834896109](/home/galigaribaldi/.config/Typora/typora-user-images/1560834896109.png)
+
+```sql
+INSERT INTO empleado VALUES('Edgar Daniel', 'Barcenas','Martínez', to_date('1997/01/15 10:40:00','yyyy/mm/dd hh24:mi:ss'),'C',1000);
+
+INSERT INTO empleado VALUES('Berenice', 'Medel','Sánchez', to_date('1997/01/10 10:40:00','yyyy/mm/dd hh24:mi:ss'),'C',1600, NULL, NULL);
+
+```
+
+**Nota: **La notación presentada anterioremente, es la notación corta, una clara desventaja es que se debe conocer de antemano el orden el en que se definieron los campos al crear la tabla, es propensa a errores ya que en la secuencia no se ve de forma clara a que campo pertenece cada valor.
+
+Adicionalmente, se deben especificar todos los valores de los campos, aunque estos sean nulos, por ejemplo, en el caso del campo conyuge_id, si no se cuenta con el valor, se tiene que escribir la palabra “null” para indicarle al manejador la ausencia de dicho valor.
+
+La forma recomendada es la siguiente:
+
+```sql
+INSERT INTO empleado(nombre, apellido_paterno, apellido_materno, fecha_nacimiento, tipo_empleado, sueldo_base) VALUES('Isaura', 'Ramírez','Salazar', to_date('1997/07/29 10:40:00','yyyy/mm/dd hh24:mi:ss'),'C',1000);
+
+INSERT INTO empleado(nombre, apellido_paterno, apellido_materno, fecha_nacimiento, tipo_empleado, sueldo_base) VALUES('Andrea', 'García','Ruiz', to_date('1997/09/08 10:40:00','yyyy/mm/dd hh24:mi:ss'),'C',700);
+
+```
+
+#### Sentencia UPDATE
+
+#### Sentencia DELETE
+
+
+
+## Bibliografía
+
+Este Manual se realizó con la ayuda de los apuntes de los profesores:
+
+- Jorge A. Rodríguez Campos: jorgerdc@gmail.com 
+- Lucila Patricia Arellano Mendoza: claseslpam@gmail.com
+
+A los cuales se les agradece por brindar su extraordinario conocimiento.
