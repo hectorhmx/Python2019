@@ -14,6 +14,9 @@ if __name__ == '__main__':
     timepoSP = finalSP - inicioSP # tiempo sin procesos
     print('Tiempo sin procesos =>',timepoSP)
 """
+
+    ##Para saber el número de procesos posibles:
+    ##len(os.sched_getaffinity(0))
     proceso1 = Process(target = contar)
     proceso2 = Process(target = factorial)
     proceso3 = Process(target = agregarLista)
