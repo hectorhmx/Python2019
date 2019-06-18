@@ -2,10 +2,12 @@ from funciones import contar, factorial, agregarLista
 from threading import Thread
 from time import time
 
+###Definimos los hilos, estos ejecutarán las funciones
 hilo1 = Thread(target=contar)
 hilo2 = Thread(target=factorial)
 hilo3 = Thread(target=agregarLista)
 
+###Calcularemos el tiempo
 inicio = time()
 hilo1.start() # start hace que el hilo comience a realizar la función que tiene asociada
 hilo2.start()
@@ -16,8 +18,6 @@ hilo3.start()
 hilo1.join()
 hilo2.join()
 hilo3.join()
-
-print('Todos los hilos terminaron de realizar su respectivas tareas')
-
 final = time()
+print('Todos los hilos terminaron de realizar su respectivas tareas')
 print('Tiempo transcurrido =>',final-inicio)
