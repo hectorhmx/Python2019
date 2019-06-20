@@ -1,0 +1,177 @@
+METACARACTERES
+
+-------------------------------------------------
+
+Esto es el primer texto de prueba!!
+En el vamos a probar algunos patrones básicos
+que podemos usar y de paso pruebo que es muy util!!
+
+-------------------------------------------------
+
+Una mosca parada en la pared
+Ana masca parada an la parad
+Ene mesce perede en le pered
+Ini misci piridi in li pirid
+Ono mosco porodo on lo porod
+Unu muscu purudu un lu purud
+fnf mfscf pfrfdf fn lf pfrfd
+
+---EJERCICIO-------------------------------------
+
+Una expresión regular que corresponda a ...
+palabra palolobre palolobri palabro
+
+-------------------------------------------------
+
+hoy por hoy es hoy
+
+-------------------------------------------------
+
+CUANTIFICADORES
+
+-------------------------------------------------
+
+hola hoola hooola hoooola hooooola hla
+
+-----EJERCICIO-----------------------------------
+
+u ula ulala ulalalala
+
+-------------------------------------------------
+
+mario mari mariooo
+
+-------------------------------------------------
+
+Oye Luis. Y que pasaría si yo quisiera hacer
+match con un signo de interrogación o con un 
+símbolo de $ o con un signo de ? o con algo
+que tiene significado para las expresiones
+regulares?? Luis? Lui
+
+-------------------------------------------------
+
+qu que quee queee queeee queeeee queeeeee queeeeeee
+
+-------------------------------------------------
+
+hola holala holalala holalalala holalalalalala
+
+---EJERCICIO-------------------------------------
+
+maruchin marachon marchen
+
+---EJERCICIO-------------------------------------
+
+gennnt gentee genteeee gentaaa gennnnteeeeeeee
+
+No se debe capturar solo los primeros dos
+
+-------------------------------------------------
+
+RANGOS
+
+--------------------------------------------------
+
+Mi tel es 5534467029 y el de mi hermana es 5520193847
+El de mi jefe es 5500293817 y el de su amigo es 1231.
+
+--------------------------------------------------
+
+Luis luis juis Juis Auis auis 2uis 4uis 5uis @uis muis %uis
+
+--------------------------------------------------
+
+Perro. Perro? Perro+? Perro**? Perro
+
+---EJERCICIO--------------------------------------
+
+Obtener verbos en infinitivo
+
+Hay que ir a comprar la leche, pagar la renta, comer y sacar cita con el dentista. Contamos con menos de dos horas. Una vez hecho, podremos ir a la fiesta.
+
+---EJERCICIO--------------------------------------
+
+Mi correo es luisgm.proteco@gmail.com y el de mi hermana es pamela@gmail.com y el de jorge es jorge_123@hotmail.com y el de Aldo es aldo.gmail.com
+y el de Gabriel es gabo_123@gmail_com
+
+
+Obtener los correos electrónicos válidos
+
+--------------------------------------------------
+
+ALIAS
+
+--------------------------------------------------
+
+Mi tel es 5534467029 y el de mi hermana es 5520193847
+El de mi jefe es 5500293817 y el de su amigo es 1231.
+
+--------------------------------------------------
+
+Mi correo es luisgm.proteco@gmail.com y el de mi hermana es pamela@gmail.com y el de jorge es jorge_123@hotmail.com y el de Aldo es aldo.gmail.com
+y el de Gabriel es gabo_123@gmail_com
+
+--------------------------------------------------
+
+2938 2938 2019 101012 283 83928283 3948
+
+Seleccionar solo los números de 4 dígitos
+
+--------------------------------------------------
+
+GRUPOS
+
+--------------------------------------------------
+
+Podemos crear grupos específicos de datos que nos
+interesen en particular
+
+Mi tel es 5234467029 y el de mi hermana es 5320193847
+El de mi jefe es 5500293817.
+
+---EJERCICIO--------------------------------------
+
+Mi correo es luisgm.proteco@gmail.com y el de mi hermana es pamela@gmail.com y el de jorge es jorge_123@hotmail.net y el de Aldo es aldo.gmail.com
+y el de Gabriel es gabo_123@gmail_com
+
+Obtener en un grupo los nombres de usuario de los correos válidos y en otro grupo sus tipos
+
+--------------------------------------------------
+
+
+                     25                     26                     27
+                      A                      A                      A
+ Frequencies --   1304.2220              1328.7766              1349.9719
+ Red. masses --      1.3621                 1.6211                 1.5045
+ Frc consts  --      1.3651                 1.6864                 1.6154
+ IR Inten    --      7.1110                 2.5058                 2.2857
+ Dip. str.   --     21.7513                 7.5230                 6.7547
+ Rot. str.   --    -17.6478               -11.4605                 3.4941
+ E-M angle   --    114.7246               138.4701                78.7657
+
+ 
+                    13                     14                     15
+                      A                      A                      A
+ Frequencies --    889.9260               945.5958               962.5290
+ Red. masses --      1.7703                 1.8558                 1.4450
+ Frc consts  --      0.8261                 0.9777                 0.7888
+ IR Inten    --      4.9241                 1.9971                 0.8548
+ Dip. str.   --     22.0739                 8.4258                 3.5427
+ Rot. str.   --      6.5789                15.7269               -17.5188
+ E-M angle   --     80.5052                52.0161               158.6247
+
+
+                     31                     32                     33
+                      A                      A                      A
+ Frequencies --   1463.4160              1508.4178              1513.0822
+ Red. masses --      1.0831                 1.0687                 1.0592
+ Frc consts  --      1.3667                 1.4326                 1.4287
+ IR Inten    --      3.7532                 8.3617                 1.0409
+ Dip. str.   --     10.2315                22.1146                 2.7444
+ Rot. str.   --      4.7981                 0.7487                 2.8879
+ E-M angle   --     34.8146                85.9274                51.7572
+
+--------------------------------------------------
+
+
