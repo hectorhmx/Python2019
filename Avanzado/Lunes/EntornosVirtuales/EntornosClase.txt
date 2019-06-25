@@ -1,0 +1,28 @@
+#####Caso linux y mac
+python3 -m venv mientorno ###creamos un entorno 
+
+cd mientorno ###Entramos al entorno
+
+source bin/activate ###Activamos el entorno, debe aparecer (mientorno)antes del prompt
+
+
+##Si deseamos instalar archivos, lo hacemos de este modo
+
+python3 -m pip install modulo
+
+####Ej:python3 -m pip install jupyter
+###Para ejecutarlo usariamos jupyter-notebook
+
+deactivate ###para salir
+
+#####Caso Windows
+python -m venv mientorno ###Importante que este instalado python3
+
+cd mientorno/Scripts
+
+activate.bat###Entrar al entorno virtual
+
+deactivate ###para salir
+
+###para instalar cosas
+python -m pip install modulo
