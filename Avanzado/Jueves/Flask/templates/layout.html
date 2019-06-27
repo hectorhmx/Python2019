@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/materialize.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- {{ url_for('static', filename='css/materialize.css') }} Metodo de jinja para heredar desde flask-->
 </head>
 
@@ -16,11 +17,10 @@
     <!--Barra de navegacion-->
     <nav>
         <div class="nav-wrapper #448aff blue accent-2">
-            <a href="#" class="brand-logo">Pythonn Flask</a>
+            <a href="/" class="brand-logo">Python Flask</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
+                <li><a href="/crear">Crear una Cuenta</a></li>
+                <li><a href="/pelicula">Catálogo de películas</a></li>
             </ul>
         </div>
     </nav>
@@ -39,30 +39,27 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                        content.</p>
+                    <h5 class="white-text">Python 2019</h5>
+                    <p class="grey-text text-lighten-4"> Página cargada de buenos sentimientos para una sencilla puesta en Flask</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
+                    <h5 class="white-text">Links de Apoyo</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://github.com/hectorhmx/Python2019">Github</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/proteco/">Fb</a></li>
+                        <li><a class="grey-text text-lighten-3" href="http://moodle.proteco.mx/login/index.php">Moodle</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://github.com/galigaribaldi/">Gali github</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                © 2016 Python Intersemestral Junio 2019
             </div>
         </div>
     </footer>
     <!--Inicio de Footer-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script></body>
 
 </html>

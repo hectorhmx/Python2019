@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1> Registrate </h1>
+
+<form action="/add" , method="POST">
+    <h2>Registro de Usuarios</h2>
+    <input type="text" name="usuario_id" placeholder="Contraseña">
+    <input type="text" name="ap_pat" placeholder="Apellido Paterno">
+    <input type="text" name="ap_mat" placeholder="Apellido Materno">
+    <input type="text" name="direccion" placeholder="Direccion">
+    <input type="text" name="correo" placeholder="Correo">
+    <button type="submit"> SAVE </button>
+</form>
+</body>
+{% endblock %}
